@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { LucideAngularModule, Trash, CircleX } from 'lucide-angular';
 
 import { CartComponent } from './cart.component';
 
@@ -8,7 +10,11 @@ describe('CartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CartComponent ]
+      declarations: [ CartComponent ],
+      imports: [
+        HttpClientTestingModule,
+        LucideAngularModule.pick({Trash, CircleX})
+      ]
     })
     .compileComponents();
 
