@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/service/product.service';
+import { Product } from 'src/app/utilities/interface/product';
 
 @Component({
   selector: 'app-product-group',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductGroupComponent implements OnInit {
 
-  constructor() { }
+  public productItems:Product[] = [];
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productService.fetchProductData().subscribe((res) => {
+      this.productItems = res;
+      console.log(this.productItems);
+      
+    })
   }
 
 }

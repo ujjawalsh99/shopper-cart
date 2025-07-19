@@ -1,30 +1,5 @@
-<div class="product-group">
-	<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
-
-
+<div class="product-group" *ngIf="productItems.length > 0">
+    <ng-container *ngFor="let item of productItems">
+        <app-product-card [product]="item"></app-product-card>
+    </ng-container>
 </div>

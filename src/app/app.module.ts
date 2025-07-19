@@ -8,6 +8,7 @@ import { LucideAngularModule, ShoppingCart } from 'lucide-angular';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductGroupComponent } from './components/product-group/product-group.component';
 import { CartComponent } from './components/cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CartComponent } from './components/cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LucideAngularModule.pick({ShoppingCart})
+    LucideAngularModule.pick({ShoppingCart}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
