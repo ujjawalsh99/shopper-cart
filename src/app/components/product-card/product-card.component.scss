@@ -36,6 +36,7 @@
 	.product-price {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
 		p {
 			color: var(--navigation-header);
@@ -43,11 +44,18 @@
 		}
 
 		button {
-			background-color: var(--button-color);
+			background-color: var(--button-color-light);
 			padding: var(--spacing-xs) var(--spacing-xl);
 			border-radius: var(--border-radius-lg);
 			border: none;
 			color: var(--text-light);
+			line-height: 0;
+			height: 45px;
+
+			&:hover{
+				background-color: var(--button-color-dark);
+				cursor: pointer;
+			}
 		}
 	}
 }
