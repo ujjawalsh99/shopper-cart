@@ -1,0 +1,6 @@
+.product-group{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var(--spacing-lg);
+}

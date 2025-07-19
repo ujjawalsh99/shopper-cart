@@ -1,0 +1,15 @@
+#dashboard {
+	display: flex;
+	padding: var(--spacing-xxl);
+	max-width: 1400px;
+	margin: 0 auto;
+	width: 100%;
+
+	.product-group-container {
+		flex: 4;
+	}
+
+	.sidebar {
+		flex: 1;
+	}
+}

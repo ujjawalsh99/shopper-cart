@@ -21,7 +21,7 @@
 	/* Background Colors */
 	--bg-primary: #ffffff;
 	--bg-secondary: #f8f9fa;
-	--bg-dark: #343a40;
+	--bg-dark: #f4f4f4;
 
 	/* Spacing */
 	--spacing-xs: 0.25rem;
@@ -78,6 +78,7 @@
 	--header-height: 60px;
 	--footer-height: 80px;
 	--navigation-header: #0077c8;
+	--button-color: #0079c9
 }
 
 /* Global Styles */
@@ -92,5 +93,5 @@ body {
 	font-size: var(--font-size-base);
 	line-height: 1.5;
 	color: var(--text-primary);
-	background-color: var(--bg-primary);
+	background-color: var(--bg-dark);
 }
