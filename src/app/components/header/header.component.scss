@@ -1,0 +1,28 @@
+@import '../../../styles.scss';
+
+#navigation {
+  background-color: var(--navigation-header);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+	display: flex;
+	justify-content: space-around;
+
+  h1 {
+    font-size: var(--font-size-xxl);
+    color: var(--text-light);
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+		cursor: default;
+  }
+
+  .my-icon {
+    margin-left: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+    transition: var(--transition-fast);
+    
+    &:hover {
+      transform: scale(1.1);
+			cursor: pointer;
+    }
+  }
+}
