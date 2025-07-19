@@ -1,5 +1,13 @@
-<div class="product-group" *ngIf="productItems.length > 0">
+<div class="product-group" *ngIf="productItems.length > 0; else loading">
     <ng-container *ngFor="let item of productItems">
         <app-product-card [product]="item"></app-product-card>
     </ng-container>
 </div>
+
+<ng-template #loading>
+    <div class="product-group">
+        <ng-container *ngFor="let i of shimmerArray; let index = index">
+            <app-shimmer></app-shimmer>
+        </ng-container>
+    </div>
+</ng-template>

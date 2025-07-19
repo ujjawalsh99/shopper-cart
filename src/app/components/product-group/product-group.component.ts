@@ -10,6 +10,7 @@ import { Product } from 'src/app/utilities/interface/product';
 export class ProductGroupComponent implements OnInit {
 
   public productItems:Product[] = [];
+  shimmerArray = Array(10).fill(0);
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {

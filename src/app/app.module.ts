@@ -9,6 +9,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductGroupComponent } from './components/product-group/product-group.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ShimmerComponent } from './components/shared/shimmer/shimmer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     ProductCardComponent,
     ProductGroupComponent,
-    CartComponent
+    CartComponent,
+    ShimmerComponent
   ],
   imports: [
     BrowserModule,
