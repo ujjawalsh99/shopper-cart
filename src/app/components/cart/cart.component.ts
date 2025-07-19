@@ -27,10 +27,12 @@ export class CartComponent implements OnInit {
 
   clearCart(): void {
     this.productService.cartService.next([]);
+    this.productService.notifyCartUpdate('clear');
   }
 
   deleteItem(item: number): void {
     this.productService.deleteCartItem(item);
+    this.productService.notifyCartUpdate('delete', item);
   }
 
 }

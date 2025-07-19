@@ -15,7 +15,13 @@ export class ProductCardComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-
+    this.productService.cartUpdate$.subscribe(update => {
+    if (update.action === 'clear') {
+      this.addedToCart = false;
+    } else if (update.action === 'delete' && update.productId === this.product.id) {
+      this.addedToCart = false;
+    }
+  });
   }
 
   addToCart(product: Product): void {

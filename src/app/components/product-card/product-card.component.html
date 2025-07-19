@@ -12,10 +12,10 @@
   </div>
   <div class="product-price">
     <p>Price: {{ product.price | currency : "USD" }}</p>
-    <button *ngIf="!addedToCart" (click)="addToCart(product)">
+    <button class="add-cart" *ngIf="!addedToCart" (click)="addToCart(product)">
       Add to Cart
     </button>
-    <button *ngIf="addedToCart" (click)="removeFromCart(product.id)">
+    <button class="remove-cart" *ngIf="addedToCart" (click)="removeFromCart(product.id)">
       Remove from Cart
     </button>
   </div>

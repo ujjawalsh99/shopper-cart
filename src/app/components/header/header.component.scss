@@ -41,4 +41,8 @@
       font-weight: var(--font-weight-bold);
     }
   }
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
 }

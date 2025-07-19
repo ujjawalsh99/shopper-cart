@@ -29,9 +29,11 @@
     }
 
     p {
+      height: 260px;
       font-size: var(--font-size-base);
       color: var(--text-secondary);
       margin: var(--spacing-xs) 0;
+      overflow-y: scroll;
     }
   }
 
@@ -47,7 +49,7 @@
 
     button {
       background-color: var(--button-color-light);
-      padding: var(--spacing-xs) var(--spacing-xl);
+      padding: var(--spacing-xs) var(--spacing-md);
       border-radius: var(--border-radius-lg);
       border: none;
       color: var(--text-light);
@@ -57,6 +59,14 @@
       &:hover {
         background-color: var(--button-color-dark);
         cursor: pointer;
+      }
+
+      &.remove-cart {
+        background-color: var(--danger-color);
+
+        &:hover {
+          background-color: darkred;
+        }
       }
     }
   }
