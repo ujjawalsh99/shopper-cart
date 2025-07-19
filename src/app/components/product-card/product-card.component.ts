@@ -9,6 +9,7 @@ import { Product } from 'src/app/utilities/interface/product';
 })
 export class ProductCardComponent implements OnInit {
 
+  addedToCart: boolean = false;
   @Input() product!:Product;
 
   constructor(private productService: ProductService) { }
@@ -18,7 +19,13 @@ export class ProductCardComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
+    this.addedToCart = !this.addedToCart;
     this.productService.cartService.next([...this.productService.cartService.value, product]);
+  }
+
+  removeFromCart(productId: number): void {
+    this.addedToCart = !this.addedToCart;
+    this.productService.deleteCartItem(productId)
   }
 
 }
