@@ -5,7 +5,7 @@ ShopperCart is a modern Angular-based shopping cart application. It provides a s
 ## Hosted Application
 The ShopperCart application is hosted and can be accessed at:
 
-[ShopperCart Live Website](https://github.com/ujjawalsh99/shopper-cart.git)
+[ShopperCart Live Website](https://shopper-cart-ujjawal-shrivastavas-projects.vercel.app/)
 
 Navigate to the above link to explore the live version of the application.
 
