@@ -1,27 +1,85 @@
-# ShopperCart
+# Shopper Cart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+ShopperCart is a modern Angular-based shopping cart application. It provides a seamless user experience for browsing products, adding them to the cart, and managing the cart.
 
-## Development server
+## Hosted Application
+The ShopperCart application is hosted and can be accessed at:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[ShopperCart Live Website](https://github.com/ujjawalsh99/shopper-cart.git)
 
-## Code scaffolding
+Navigate to the above link to explore the live version of the application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
+- **Product Listing**: Displays a list of products fetched from an external API.
+- **Cart Management**: Add, remove, and clear items in the cart.
+- **Responsive Design**: Optimized for various screen sizes.
 
-## Build
+## Components
+The application consists of the following components:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **HeaderComponent**: Displays the application title and cart icon with the item count.
+2. **ProductGroupComponent**: Groups and displays a list of products.
+3. **ProductCardComponent**: Represents individual product details.
+4. **CartComponent**: Manages and displays items in the cart.
+5. **ShimmerComponent**: Provides a loading shimmer effect.
 
-## Running unit tests
+## Data Source
+The product details are fetched from an external API defined in the `PRODUCT_URL` constant in the `utilities/constant.ts` file.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Prerequisites
+- Node.js (v14 or later)
+- Angular CLI (v14.2.13 or later)
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Clone the Repository
+```bash
+git clone https://github.com/ujjawalsh99/shopper-cart.git
+cd shopper-cart
+```
 
-## Further help
+### Install Dependencies
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Run the Development Server
+```bash
+npm start
+```
+Navigate to `http://localhost:4200/` in your browser. The application will automatically reload if you make any changes to the source files.
+
+### Run Unit Tests
+```bash
+ng test
+```
+Executes the unit tests via [Karma](https://karma-runner.github.io).
+
+### Build the Application
+```bash
+ng build
+```
+Builds the project and stores the output in the `dist/` directory.
+
+
+## Project Structure
+```
+shopper-cart/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── cart/
+│   │   │   ├── header/
+│   │   │   ├── product-card/
+│   │   │   ├── product-group/
+│   │   │   ├── shared/
+│   │   │       └── shimmer/
+│   │   ├── service/
+│   │   └── utilities/
+│   ├── assets/
+│   ├── environments/
+│   └── index.html
+├── angular.json
+├── package.json
+└── README.md
+```
