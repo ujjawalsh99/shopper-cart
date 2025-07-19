@@ -30,4 +30,11 @@ describe('ProductGroupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render the product group', () => {
+    const fixture = TestBed.createComponent(ProductGroupComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.product-group')).toBeTruthy();
+  });
 });

@@ -17,13 +17,21 @@ describe('HeaderComponent', () => {
       ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
+    component.cartCount$ = 5;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render the header', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('nav')).toBeTruthy();
   });
 });

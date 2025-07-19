@@ -17,7 +17,9 @@ describe('CartComponent', () => {
       ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -25,5 +27,10 @@ describe('CartComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render the cart', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('div#cart-container')).toBeTruthy();
   });
 });
