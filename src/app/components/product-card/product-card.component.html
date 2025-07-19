@@ -7,7 +7,7 @@
 		<p>{{product.description}}</p>
 	</div>
 	<div class="product-price">
-		<p>Price: {{product.rating.rate}}</p>
-		<button>Add to Cart</button>
+		<p>Price: {{product.price | currency: 'USD'}}</p>
+		<button (click)="addToCart(product)">Add to Cart</button>
 	</div>
 </div>

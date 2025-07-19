@@ -5,6 +5,7 @@ export interface Product {
     readonly description: string;
     readonly category: string;
     readonly rating: Rating;
+    readonly price: number;
 }
 
 export interface Rating {

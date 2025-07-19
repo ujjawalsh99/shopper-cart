@@ -1,4 +1,22 @@
 <div id="cart-container">
-	<h2>Cart</h2>
-	<p>Your cart is empty.</p>
+	<div class="cart-header">
+		<h2>Cart</h2>
+		<lucide-angular (click)="clearCart()" name="trash" [size]="20" [strokeWidth]="3" class="my-icon"></lucide-angular>
+	</div>
+
+	<ng-container *ngIf="cartItems.length > 0; else emptyCart">
+		<div *ngFor="let item of cartItems" class="cart-item">
+			<div class="cart-item-details">
+				<div class="product-title">{{item.title}}</div>
+				<div class="product-price">Price: {{item.price | currency: 'USD'}}</div>
+			</div>
+			<lucide-angular (click)="deleteItem(item.id)" name="circle-x" [size]="20" [strokeWidth]="2" class="my-icon"></lucide-angular>
+		</div>
+		<div class="cart-total">
+			<h3>Total Price: {{totalPrice | currency: 'USD'}}</h3>
+		</div>
+	</ng-container>
+	<ng-template #emptyCart>
+		<p class="empty-cart">Your cart is empty.</p>
+	</ng-template>
 </div>
